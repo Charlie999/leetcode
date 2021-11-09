@@ -1,3 +1,7 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 int lengthOfLongestSubstring(char * s){
     int rlen = 0, v = 0;
     char* sO = s;
@@ -19,4 +23,9 @@ int lengthOfLongestSubstring(char * s){
     }
     
     return rlen;
+}
+
+int main() {
+ printf("%d\n",lengthOfLongestSubstring("abcabcbb"));
+ return 0;
 }

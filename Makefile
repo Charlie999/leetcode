@@ -1,5 +1,6 @@
 SRCS = $(wildcard *.c)
 PROGS = $(patsubst %.c,%,$(SRCS))
+CFLAGS = -lm
 
 all: clean $(PROGS)
 
@@ -8,4 +9,4 @@ clean:
 	rm -f $(PROGS)
 
 %: %.c
-	$(CC) $(CFLAGS)  -o $@ $<
+	$(CC) -o $@ $< $(CFLAGS)
